@@ -1,0 +1,23 @@
+{
+  // 1) Yorumlayıcı: proje bağımlılıkları (fastapi, uvicorn, pyodbc...) bu
+  //    conda ortamında kuruludur. Kurmak için:  conda env create -f environment.yml
+  "python.defaultInterpreterPath": "/opt/miniconda3/envs/gorev-yoneticisi/bin/python",
+
+  // 2) Backend importları (from config import ..., from schemas import ...)
+  //    backend/ klasörüne göre yazılmıştır; uygulama Docker'da WORKDIR /app
+  //    ile çalıştığı için bu doğrudur. Editörün de aynı yerden bakması için:
+  "python.analysis.extraPaths": ["./backend"],
+  "python.autoComplete.extraPaths": ["./backend"],
+
+  // Gereksiz klasörler aramalarda ve dosya ağacında görünmesin
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/__pycache__": true,
+    "**/dist": true
+  },
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+  "python-envs.defaultEnvManager": "ms-python.python:conda",
+  "python-envs.defaultPackageManager": "ms-python.python:conda"
+}

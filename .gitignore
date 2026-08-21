@@ -1,0 +1,45 @@
+# ==========================================
+# GIT TARAFINDAN YOK SAYILACAKLAR
+# ==========================================
+
+# --- GİZLİ BİLGİLER ---
+# .env veritabanı parolalarını ve JWT anahtarını içerir.
+# Kurulum için paylaşılan şablon .env.example dosyasıdır.
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# --- Bağımlılıklar ---
+# Kaynak koddan yeniden kurulur (npm ci / pip install).
+node_modules/
+.venv/
+venv/
+
+# --- Python üretilen dosyalar ---
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# --- Derleme çıktıları ---
+dist/
+build/
+*.local
+
+# --- Günlükler ---
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# --- İşletim sistemi / editör ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+
+# NOT: .vscode/ bilerek dışarıda bırakılmadı. İçinde gizli bilgi yok;
+# yorumlayıcı ve import yolu ayarları projeyi klonlayan herkese lazım.

@@ -1,0 +1,19 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Bağımlılıklar önce kurulur: kaynak kod değiştiğinde bu katman
+# önbellekten gelir ve yeniden kurulum yapılmaz.
+COPY package*.json ./
+RUN npm ci
+
+COPY . .
+
+# node imajındaki hazır ayrıcalıksız kullanıcı.
+RUN chown -R node:node /app
+USER node
+
+EXPOSE 5173
+
+# Host ve port ayarları vite.config.js içinde tanımlıdır.
+CMD ["npm", "run", "dev"]

@@ -1,0 +1,12 @@
+# Derleme bağlamına girmemesi gerekenler.
+# node_modules özellikle önemli: imaja kopyalanırsa hem imaj şişer hem de
+# host mimarisine göre derlenmiş ikili dosyalar konteynerde bozuk çalışır.
+**/node_modules
+**/__pycache__
+**/*.pyc
+**/dist
+**/.git
+**/.vscode
+**/.DS_Store
+**/.env
+**/*.log

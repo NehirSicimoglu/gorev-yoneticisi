@@ -1,0 +1,14 @@
+# Sürümler sabitlenmiştir: aksi hâlde her derleme farklı bir sürüm
+# çekebilir ve bugün çalışan kurulum yarın sessizce bozulabilir ya da
+# yeni bir zafiyet içeren sürüme geçebilir. Güncellerken tek tek
+# yükseltip testleri çalıştırın.
+
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+pydantic==2.13.4
+email-validator==2.3.0
+python-dotenv==1.2.3
+pymongo==4.17.0
+pyodbc==5.3.0
+bcrypt==5.0.0
+pyjwt==2.13.0

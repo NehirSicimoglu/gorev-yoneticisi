@@ -1,0 +1,43 @@
+# ==========================================
+# Conda geliştirme ortamı
+#
+# Kurulum:
+#   conda env create -f environment.yml
+#   conda activate gorev-yoneticisi
+#
+# Docker kullanıldığında bu ortam gerekmez; yerel geliştirme ve
+# bağımlılık yönetimi içindir.
+#
+# Not: MSSQL sürücüsü (ODBC Driver 18) conda paketi değildir, işletim
+# sistemine ayrıca kurulur. macOS için:
+#   brew tap microsoft/mssql-release
+#   brew install msodbcsql18
+# ==========================================
+name: gorev-yoneticisi
+
+channels:
+  - conda-forge
+  # nodefaults: Anaconda'nın varsayılan kanallarını devre dışı bırakır.
+  # Böylece ticari kullanım şartı gerektiren kanallara hiç gidilmez.
+  - nodefaults
+
+dependencies:
+  - python=3.10
+
+  # --- Web çatısı ---
+  - fastapi
+  - uvicorn
+  - pydantic
+  - email-validator
+  - python-dotenv
+
+  # --- Veritabanı sürücüleri ---
+  - pymongo
+  - pyodbc
+
+  # --- Güvenlik ---
+  - bcrypt
+  - pyjwt
+
+  # --- Geliştirme/test (üretim imajına girmez) ---
+  - pytest
