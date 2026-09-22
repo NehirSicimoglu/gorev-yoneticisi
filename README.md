@@ -25,7 +25,6 @@ Uygulamanın temel amacı, ilişkisel ve NoSQL veritabanlarını aynı uygulama 
 ## Kullanılan Teknolojiler
 
 **Backend**
-<img width="1583" height="828" alt="projeresim" src="https://github.com/user-attachments/assets/516e0e25-2bf1-47a4-af4c-9939621706e2" />
 
 * FastAPI
 * Python
